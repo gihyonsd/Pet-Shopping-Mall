@@ -5,6 +5,9 @@ import java.awt.Desktop.Action;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import svc.DogViewService;
+import vo.ActionForward;
+import vo.Dog;
 
 public class DogViewAction implements Action{
 
