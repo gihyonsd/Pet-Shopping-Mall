@@ -7,7 +7,7 @@
 	factory = "org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
 	driverClassName = "oracle.jdbc.driver.OracleDriver"
 	url = "jdbc:oracle:thin:@localhost:1521:xe"
-	username = "java"
+	username = "c##java"
 	password = "java"
 	maxActive = "500" />
 </Context>

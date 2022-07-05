@@ -4,17 +4,17 @@ public class Dog {
 	
 	private int id;
 	private String kind;
-	private String name;
+	private String GoodsName;
 	private int price;
 	private String image;
 	private String content;
 	private int readcount;
 	
-	public Dog(int id, String kind, String name, int price, String image, String content, int readcount) {
+	public Dog(int id, String kind, String GoodsName, int price, String image, String content, int readcount) {
 		super();
 		this.id = id;
 		this.kind = kind;
-		this.name = name;
+		this.GoodsName = GoodsName;
 		this.price = price;
 		this.image = image;
 		this.content = content;
@@ -34,10 +34,10 @@ public class Dog {
 		this.kind = kind;
 	}
 	public String getName() {
-		return name;
+		return GoodsName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String GoodsName) {
+		this.GoodsName = GoodsName;
 	}
 	public int getPrice() {
 		return price;

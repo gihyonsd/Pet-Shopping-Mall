@@ -26,14 +26,13 @@ public class DogRegistAction implements Action {
 		
 		ServletContext context = request.getServletContext();
 		realFolder = context.getRealPath(saveFolder);
-		MultipartRequest multi = new MultipartRequest(request,
-					realFolder, maxSize, encType,
+		MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType,
 					new DefaultFileRenamePolicy());
 		String image = multi.getFilesystemName("image");
 		Dog dog = new Dog(
 				0, 
 				multi.getParameter("kind"), 
-				multi.getParameter("name"),
+				multi.getParameter("GoodsName"),
 				Integer.parseInt(multi.getParameter("price")), 
 				image, 
 				multi.getParameter("content"), 

@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	#listForm{
+	#listForm {
 		width:700px;
 		height:500px;
 		border:1px solid red;
@@ -53,7 +53,7 @@
 <body>
 <section id= "listForm">
 <c:if test="${dogList != null}">
-<h2>개 상품목록<a href="dogRegistForm.dog">개 상품등록</a></h2>
+<h2>상품목록<a href="dogRegistForm.dog">상품등록</a></h2>
 <table>
 	<tr>
 		<c:forEach var = "dog" items="${dogList }" varStatus="status">
@@ -74,12 +74,12 @@
 </c:if>
 <c:if test="${dogList==null }">
 	<div class="div_empty">
-	개 상품이 없습니다. 분양불가
+	상품이 없습니다.
 	</div>
 </c:if>
 <c:if test="${todayImageList !=null }">
 <div id="todayImageList">
-<h2>오늘 본 개 상품 목록</h2>
+<h2>오늘 본 상품 목록</h2>
 <table>
 	<tr>
 		<c:forEach var="todayImage" items="${todayImageList }" varStatus="status">

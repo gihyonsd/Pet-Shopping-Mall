@@ -13,7 +13,7 @@ public class DogCartQtyDownAction implements Action {
 		String kind = request.getParameter("kind");
 		DogCartQtyDownService dogCartQtyDownService = new DogCartQtyDownService();
 		dogCartQtyDownService.downCartQty(kind, request);
-		ActionForward forward = new ActionForward("dogDartList.dog", true);
+		ActionForward forward = new ActionForward("dogCartList.dog", true);
 		return forward;
 	}
 

@@ -43,7 +43,7 @@ public class DogDAO {
 					dogList.add(new Dog(
 							rs.getInt("id")
 							,rs.getString("kind")
-							,rs.getString("name")
+							,rs.getString("GoodsName")
 							,rs.getInt("price")
 							,rs.getString("image")
 							,rs.getString("content")
@@ -75,7 +75,7 @@ public class DogDAO {
 				dog = new Dog(
 						rs.getInt("id")
 						,rs.getString("kind")
-						,rs.getString("name")
+						,rs.getString("GoodsName")
 						,rs.getInt("price")
 						,rs.getString("image")
 						,rs.getString("content")
@@ -118,15 +118,14 @@ public class DogDAO {
 		String sql= "";
 		
 		try {
-			sql = "INSERT INTO Goods VALUES(dog_seq.nextval,?,?,?,?,?,?,?)";
+			sql = "INSERT INTO Goods VALUES(Goods_seq.nextval,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, dog.getId());
-			pstmt.setString(2, dog.getKind());
-			pstmt.setString(3, dog.getName());
-			pstmt.setInt(4, dog.getPrice());
-			pstmt.setString(5, dog.getImage());
-			pstmt.setString(6, dog.getContent());
-			pstmt.setInt(7, dog.getReadcount());
+			pstmt.setString(1, dog.getKind());
+			pstmt.setString(2, dog.getName());
+			pstmt.setInt(3, dog.getPrice());
+			pstmt.setString(4, dog.getImage());
+			pstmt.setString(5, dog.getContent());
+			pstmt.setInt(6, dog.getReadcount());
 			insertCount = pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();
