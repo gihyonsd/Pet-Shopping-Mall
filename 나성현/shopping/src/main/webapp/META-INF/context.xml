@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+	name = "jdbc/shopping"
+	auth = "Container"
+	type = "javax.sql.DataSource"
+	factory = "org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+	driverClassName = "oracle.jdbc.driver.OracleDriver"
+	url = "jdbc:oracle:thin:@localhost:1521:xe"
+	username = "c##java"
+	password = "java"
+	maxActive = "500" />
+</Context>
+
+<!-- 
+1. name = JNDI로 호출될 이름을 설정
+2. auth : DBCP를 관리할 관리자 
+3. type : 해당 resource의 return type
+4. factory : dbcp 관리 클래스
+5. driverClassName : JDBC를 이용하기 위한 드라이버 클래스
+6. url : DB의 접속 URL
+7. username : DB의 계정 명
+8. password : 계정에 대한 비밀번호
+9. maxActive : 최대 접속 허용 개수
+10. maxIdle : DB pool에 여분으로 남겨질 최대 Connectin 개수
+11. maxWait : DB 연결이 반환되는 Timeout의 최대 시간(-1은 무한 대기)
+12. removeAbandoned : Connection이 잘못 관리되어 버려진 연결을 찾아 재활용할 것인지 여부 설정
+13. removeAbandonedTimeout : 버려진 연결로 인식할 기본 시간 설정
+(초 단위로 해당 시간이 지나면 버려진 연결로 인식)
+ -->
