@@ -135,5 +135,23 @@ public class DogDAO {
 		
 		return insertCount;
 	}
+	public int DeleteProduct(int id) {
+		PreparedStatement pstmt = null;
+		int DeleteProduct = 0;
+		String sql = "";
+		
+		try {
+			sql = "DELETE FROM Goods WHERE id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1,  id);
+			DeleteProduct = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return DeleteProduct;
+	}
 	
 }

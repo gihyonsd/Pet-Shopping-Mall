@@ -86,7 +86,7 @@
 		<td>
 			<img src="images/${todayImage}" id="todayImage" />
 		</td>
-			<c:if test="${((status.index+1) mod 4)==0 }">
+			<c:if test="${((status.index+1) mod 1)==0 }">
 	</tr>
 	<tr>
 		</c:if>
