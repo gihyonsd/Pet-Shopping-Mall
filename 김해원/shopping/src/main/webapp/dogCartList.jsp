@@ -202,14 +202,14 @@
              <img src = "images/${cart.image }" id ="cartImage"/>
             </td>
              <td>
-             ${cart.kind }
+             ${cart.name }
             </td>
              <td>
              ${cart.price }
             </td>
              <td>
              <a href="dogCartQtyUp.dog?kind=${cart.kind }">
-             <img src="images/up.jpg" id = "upImage" border=0/>
+             <img src="images/up.jpg" id ="upImage" border=0/>
              </a><br>
              ${cart.qty }<br>
              <a href="javascript:checkQty('${cart.kind}',${cart.qty})">
