@@ -4,6 +4,7 @@ public class Cart {
 	
 	private String image;
 	private String kind;
+	private String GoodsName;
 	private int price;
 	private int qty;
 	
@@ -37,6 +38,14 @@ public class Cart {
 	
 	public void setQty(int qty) {
 		this.qty = qty;
+	}
+
+	public String getName() {
+		return GoodsName;
+	}
+
+	public void setName(String GoodsName) {
+		this.GoodsName = GoodsName;
 	}
 	
 }

@@ -34,7 +34,7 @@ public class DogCartAddService {
 		boolean isNewCart = true;
 		//지금 장바구니에 담는 항목이 새로 추가되는 항목인지를 저장할 변수
 		for(int i = 0; i < cartList.size(); i++) {
-			if(cartDog.getKind().equals(cartList.get(i).getKind())) {
+			if(cartDog.getName().equals(cartList.get(i).getName())) {
 				isNewCart = false;
 				cartList.get(i).setQty(cartList.get(i).getQty() + 1);
 				break;
@@ -44,6 +44,7 @@ public class DogCartAddService {
 			Cart cart = new Cart();
 			cart.setImage(cartDog.getImage());
 			cart.setKind(cartDog.getKind());
+			cart.setName(cartDog.getName());
 			cart.setPrice(cartDog.getPrice());
 			cart.setQty(1);
 			cartList.add(cart);
